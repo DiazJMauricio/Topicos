@@ -6,8 +6,20 @@
 </head>
 <body>
 	<div>
-		<h1><?php echo $content; ?></h1>
-		<a href="<?php echo base_url()?>">link</a>
+		<form method="post" action="<?php echo base_url()?>validar" >
+			<select name = "tipo">
+			    <option value="Infante">Infante</option>
+			 	<option value="Juvenil">Juvenil</option>
+			 	<option value="Mayor">Mayor</option>
+			 	<option value="Veterano">Veterano</option>
+			</select><br>
+			<input type="text" name="nombre" placeholder="Nombre"><br>
+			<input type="number" name="edad" placeholder="Edad"><br>
+			<input type="text" name="dni" placeholder="DNI"><br>
+			<?php 
+			?>
+			<input type="submit" name="submit" value="Registrar"><br>
+		</form>
 	</div>
 	<div>
 		<table>
