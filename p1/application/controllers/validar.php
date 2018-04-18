@@ -6,19 +6,14 @@ class Validar extends CI_Controller {
 	public function index(){
 
 		if (isset($_POST)){
-			$data = array(
-				'tipo' => $_POST['tipo'],
-				'nombre' => $_POST['nombre'],
-				'edad' => $_POST['edad'],
-				'dni' => $_POST['dni']
-			 );
-			
-		}
+			$data = array('tipo' => $_POST['tipo']);
 
-		$this->load->view('validar',$data);
+			$this->load->view('validar',$data);
+		}
 	}
+
 	public function registrar(){
-		echo "Registrado";
+		echo '<a href='. base_url().'>Volver</a>';
 		$this->ejer4->insertar($_POST);
 	}
 }

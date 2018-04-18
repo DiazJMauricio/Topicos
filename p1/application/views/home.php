@@ -13,9 +13,6 @@
 			 	<option value="Mayor">Mayor</option>
 			 	<option value="Veterano">Veterano</option>
 			</select><br>
-			<input type="text" name="nombre" placeholder="Nombre"><br>
-			<input type="number" name="edad" placeholder="Edad"><br>
-			<input type="text" name="dni" placeholder="DNI"><br>
 			<?php 
 			?>
 			<input type="submit" name="submit" value="Registrar"><br>
@@ -34,12 +31,25 @@
 			<?php 
 				foreach ($consulta->result() as $fila) {
 					?>
-					<td><?php echo $fila->tipo; ?></td>
+					<tr>
+					<td><?php 
+						if ($fila->edad < 12) {
+							echo 'Infante';
+						}
+						else if($fila->edad < 18){
+							echo 'Juvenil';
+						}else if($fila->edad < 30){
+							echo 'Mayor';
+						}else {
+							echo 'Veterano';
+						}
+					?></td>
 					<td><?php echo $fila->nombre; ?></td>
 					<td><?php echo $fila->edad; ?></td>
 					<td><?php echo $fila->dni; ?></td>
 					<td><?php echo $fila->nombretutor; ?></td>
 					<td><?php echo $fila->dnitutor ?></td>
+					</tr>
 					<?php 
 				}
 			?>
