@@ -2,12 +2,20 @@
 
 	class Home extends CI_Controller{
 
-		public function index(){			
-			$this->load->view('home');
+		public function index(){
+			$alumnos = $this->alumnos->getAlumnos();
+			$docentes = $this->docentes->getDocentes();
+			$noDocentes = $this->noDocentes->getNoDocentes();
+
+			$data = array(
+					'alumnos' => $alumnos,
+					'docentes' => $docentes,
+					'noDocentes' => $noDocentes);
+			$this->load->view('home', $data);
 		}
-		public function seleccion($accion){
-			$data = array('accion' => $accion);
-			$this->load->view('seleccion',$data);
+	
+		public function modificar($id){
+			echo $id;
 		}
 
 	}

@@ -1,3 +1,6 @@
+<?php 
+	$tablaAlumnos = ['tipo','nombre',''];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,16 +27,85 @@
 			<div>
 			<?php 
 				if (isset($_POST['personas'])) {
-					if (sizeof($_POST['personas']) > 1) {
-						?>
-						<table>
-							<tr>
-								<td>Tipo</td>
-								<td>Nombre</td>
-							</tr>
-						<?php
-					}
 					foreach ($_POST['personas'] as $chek) {
+						if ($chek == 'alumnos') {
+							?>
+								<table>
+									<h4>Alumnos</h4>
+									<tr>
+										<td>Nombre</td>
+										<td>Carrera</td>
+										<td>Nro Registro</td>
+										<td>Año que cursa</td>
+									</tr>
+							<?php
+							foreach ($alumnos->result() as $fila) {
+								?>
+									<tr>
+										<td><?php echo $fila->nombre; ?></td>
+										<td><?php echo $fila->carrera; ?></td>
+										<td><?php echo $fila->nregistro; ?></td>
+										<td><?php echo $fila->agno; ?></td>
+										<td><a href="<?php echo base_url();?>alumno/modificar/<?php echo $fila->id;?>">Modificar</a></td>
+										<td><a href="">Dar de Baja</a></td>
+									</tr>
+								<?php
+							}
+							?></table><?php
+						}
+						if ($chek == 'docentes') {
+							?>
+								<table>
+									<h4>Docentes</h4>
+									<tr>
+										<td>Nombre</td>
+										<td>Cargo</td>
+										<td>CUIL/CUIT</td>
+									</tr>
+							<?php
+							foreach ($docentes->result() as $fila) {
+								?>
+									<tr>
+										<td><?php echo $fila->nombre; ?></td>
+										<td><?php echo $fila->cargo; ?></td>
+										<td><?php echo $fila->cuil; ?></td>
+										<td></td>
+										<td><a href="<?php echo base_url();?>docente/modificar/<?php echo $fila->id;?>">Modificar</a></td>
+										<td><a href="">Dar de Baja</a></td>
+									</tr>
+								<?php
+							}
+							?></table><?php
+						}
+						if ($chek == 'noDocentes') {
+							?>
+								<table>
+									<h4>No Docentes</h4>
+									<tr>
+										<td>Nombre</td>
+										<td>Departamento</td>
+										<td>Categoria</td>
+										<td>CUIL/CUIT</td>
+									</tr>
+							<?php
+							foreach ($noDocentes->result() as $fila) {
+								?>
+									<tr>
+										<td><?php echo $fila->nombre; ?></td>
+										<td><?php echo $fila->departamento; ?></td>
+										<td><?php echo $fila->categoria; ?></td>
+										<td><?php echo $fila->cuil; ?></td>
+										<td></td>
+										<td><a href="<?php echo base_url();?>noDocente/modificar/<?php echo $fila->id;?>">Modificar</a></td>
+										<td><a href="<?php echo base_url();?>noDocente/eliminar/<?php echo $fila->id;?>">Dar de Baja</a></td>
+									</tr>
+								<?php
+							}
+							?></table><?php
+						}
+					?>
+
+					<?php
 					}
 				}
 			?>
