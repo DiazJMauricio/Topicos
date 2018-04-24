@@ -32,10 +32,10 @@
 									<h4 class="T3">Alumnos</h4>
 									<a href="<?php echo base_url()?>alumno/alta" ><h5 class="BotonAlta" id="link">Alta Alumno</h5></a>
 									<tr>
-										<td>Nombre</td>
-										<td>Carrera</td>
-										<td>Nro Registro</td>
-										<td>Año que cursa</td>
+										<td><b>Nombre</b></td>
+										<td><b>Carrera</b></td>
+										<td><b>Nro Registro</b></td>
+										<td><b>Año que cursa</b></td>
 									</tr>
 							<?php
 							foreach ($alumnos->result() as $fila) {
@@ -60,9 +60,9 @@
 									<h4 class="T3">Docentes</h4>
 									<a href="<?php echo base_url()?>docente/alta"><h5 class="BotonAlta" id="link">Alta Docente</h5></a>
 									<tr>
-										<td>Nombre</td>
-										<td>Cargo</td>
-										<td>CUIL/CUIT</td>
+										<td><b>Nombre</b></td>
+										<td><b>Cargo</b></td>
+										<td><b>CUIL/CUIT</b></td>
 									</tr>
 							<?php
 							foreach ($docentes->result() as $fila) {
@@ -87,10 +87,10 @@
 									<h4 class="T3">No Docentes</h4>
 									<a href="<?php echo base_url()?>noDocente/alta"><h5 class="BotonAlta" id="link">Alta No Docente</h5></a>
 									<tr>
-										<td>Nombre</td>
-										<td>Departamento</td>
-										<td>Categoria</td>
-										<td>CUIL/CUIT</td>
+										<td><b>Nombre</b></td>
+										<td><b>Departamento</b></td>
+										<td><b>Categoria</b></td>
+										<td><b>CUIL/CUIT</b></td>
 									</tr>
 							<?php
 							foreach ($noDocentes->result() as $fila) {

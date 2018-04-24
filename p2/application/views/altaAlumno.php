@@ -7,11 +7,11 @@
 <body>
 	<div class="Formulario">
 		<form method="POST" action="">
-			<input type="text" name="nombre" placeholder="Nombre">
-			<input type="text" name="carrera" placeholder="Carrera">
-			<input type="text" name="nregistro" placeholder="Nro de Registro">
-			<input type="text" name="agno" placeholder="Año que cursa">
-			<input type="submit" name="submit" value="Dar Alta">
+			<input type="text" name="nombre" placeholder="Nombre" value="<?php echo set_value('nombre'); ?>">
+			<input type="text" name="carrera" placeholder="Carrera" value="<?php echo set_value('carrera'); ?>">
+			<input type="text" name="nregistro" placeholder="Nro de Registro" value="<?php echo set_value('nregistro'); ?>">
+			<input type="text" name="agno" placeholder="Año que cursa" value="<?php echo set_value('agno'); ?>">
+			<input type="submit" name="submit" value="Dar Alta" >
 
 		</form>
 		<div style="margin-left: 80%;font-size: 20px">

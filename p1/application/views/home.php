@@ -6,17 +6,8 @@
 </head>
 <body>
 	<div>
-		<form method="post" action="<?php echo base_url()?>validar" >
-			<select name = "tipo">
-			    <option value="Infante">Infante</option>
-			 	<option value="Juvenil">Juvenil</option>
-			 	<option value="Mayor">Mayor</option>
-			 	<option value="Veterano">Veterano</option>
-			</select><br>
-			<?php 
-			?>
-			<input type="submit" name="submit" value="Registrar"><br>
-		</form>
+		<a href="<?php echo base_url()?>validar/registrarMenor">Registrar un Menor</a><br>
+		<a href="<?php echo base_url()?>validar">Registrar un Mayor</a>
 	</div>
 	<div>
 		<table>

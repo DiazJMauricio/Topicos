@@ -8,7 +8,7 @@
 			$result = $this->ejer4->getPos();
 
 			$data = array(
-				'title' => 'holas',  
+				'title' => 'Asociados',  
 				'consulta' => $result );
 			$this->load->view('home', $data);
 		}
