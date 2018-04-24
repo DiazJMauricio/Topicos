@@ -22,5 +22,22 @@ class Docente extends CI_Controller{
 		$docente = $query->row();
 		$this->load->view('ModificarDocente',$docente);
 	}
+	public function eliminar($id){
+		$this->docentes->bajaDocente($id);
+		echo "<h3 id='cartelExito'>Docente Eliminado</h3>";
+		echo "<a href=".base_url().">Volver</a>";
+	}
+	public function alta(){
+		if (isset($_POST['nombre'])) {
+			$data = array(
+               'nombre' => $_POST['nombre'],
+               'cargo' => $_POST['cargo'],
+               'cuil' => $_POST['cuil']
+            );
+			$this->docentes->altaDocente($data);
+			echo "<h3 id='cartelExito'>Alta Exitosa</h3>";
+		}
+		$this->load->view('altaDocente');
+	}
 }
 ?>

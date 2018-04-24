@@ -13,15 +13,16 @@ class Docentes extends CI_Model{
 	public function getDocente($id){
 		return $this->db->query("SELECT * FROM docente WHERE id = '$id'");
 	}
-	public function altaDocente(){
-
+	public function altaDocente($data){
+		$this->db->insert('docente', $data);
 	}
 	public function modificarDocente($id, $data){
 		$this->db->where('id', $id);
 		$this->db->update('docente', $data); 
 	}
-	public function bajaDocente(){
-		
+	public function bajaDocente($id){
+		$this->db->where('id', $id);
+		$this->db->delete('docente');
 	}
 }
 ?>

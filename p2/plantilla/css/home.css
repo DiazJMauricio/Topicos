@@ -4,6 +4,19 @@
 	font-family: arial;
 	font-style: none;
 	text-decoration: none;
+	color: black;
+}
+form{
+	width: 100%;
+	height: auto;
+	display: block;
+	position: relative;
+	background-color: rgb(225,225,235);
+}
+form input{
+	width: 80%;
+	height: 30px;
+	margin: 15px 10% 0px 10%;
 }
 
 .T1{
@@ -11,41 +24,81 @@
 }
 .Contenido{
 	margin-top: 10px;
-	padding: 5px;
+	min-height: 80px;
+	padding: 15px;
 	padding-top: 20px;
 	width: 800px;
 	position: relative;
 	margin: auto;
 	border-radius: 20px;
-	background-color: rgb(235,235,245);
+	background-color: rgb(225,225,235);
 }
 
 .Menu{
-	width: 340px;
+	width: 100%;
 	position: relative;
-	margin: auto;
+	float: left;
+}
+.Menu input{
+	margin: 0px 0px 0px 10px;
+	width: 70px;
+	height: 30px;
+}
+.Menu h3{
+	float: left;
+	display: block;
+	font-size: 25px;
+}
+.T3{
+	display: block;
+	float: left;
+}
+.Boton{
+	display: block;
+	position: relative;
+	height: 30px;
+	width:70px;
+	border-style: solid;
+	border: 0px;
+	background-color: rgb(150,150,240);
+	border-radius: 5px;
 }
 
-.Boton{
-	background-color: rgb(200,200,230);
-	width: 150px;
-	height: 50px;
-	margin: 10px;
-	border-radius: 50px;
-	position: relative;
-	float:left;
+.BotonAlta{
+	float: right;
 }
-.Boton h4{
-	text-align: center;
-	padding-top: 15px;
-	color: rgb(20,20,50);
-}
+
 input,h5{
 	float:left;
 	margin: 5px;
+	
+}
+input{
+	height: 15px;
+	width:15px;
+}
+table{
+	margin-top: 20px;
+	width: 100%;
+	padding: 10px;
+	background-color: rgb(245,245,255);
+	border-radius: 10px;
 }
 td{
-	width: 250px;
+	width: 16%;
 	height: 40px;
-
+}
+#link{
+	color: rgb(100,120,200);
+}
+.Formulario{
+	width: 50%;
+	height: auto;
+	display: block;
+	position: relative;
+	background-color: rgb(225,225,235);
+	border-radius: 10px;
+}
+#cartelExito{
+	margin: 15px;
 }

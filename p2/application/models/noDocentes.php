@@ -13,8 +13,8 @@ class NoDocentes extends CI_Model{
 	public function getNoDocente($id){
 		return $this->db->query("SELECT * FROM nodocente WHERE id = '$id'");
 	}
-	public function altaNoDocente(){
-
+	public function altaNoDocente($data){
+		$this->db->insert('nodocente', $data);
 	}
 	public function modificarNoDocente($id,$data){
 		$this->db->where('id', $id);

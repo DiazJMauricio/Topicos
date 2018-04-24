@@ -7,10 +7,11 @@
 <body>
 	<div class="Formulario">
 		<form method="POST" action="">
-			<input type="text" name="nombre" placeholder="Nombre" value="<?php echo $nombre; ?>">
-			<input type="text" name="cargo" placeholder="Cargo" value="<?php echo $cargo; ?>">
-			<input type="text" name="cuil" placeholder="CUIL/CUIT" value="<?php echo $cuil; ?>">
-			<input type="submit" name="submit" value="Modificar">
+			<input type="text" name="nombre" placeholder="Nombre">
+			<input type="text" name="departamento" placeholder="Departamento">
+			<input type="text" name="categoria" placeholder="Categoria">
+			<input type="text" name="cuil" placeholder="CUIL/CUIT">
+			<input type="submit" name="submit" value="Dar Alta">
 		</form>
 		<div style="margin-left: 80%;font-size: 20px">
 			<a href="<?php echo base_url();?>" id="link">Volver</a>

@@ -21,5 +21,23 @@ class Alumno extends CI_Controller{
 		$alumno = $query->row();
 		$this->load->view('ModificarAlumno',$alumno);
 	}
+	public function eliminar($id){
+		$this->alumnos->bajaAlumno($id);
+		echo "<h3 id='cartelExito'>Alumno Eliminado</h3>";
+		echo "<a href=".base_url().">Volver</a>";
+	}
+	public function alta(){
+		if (isset($_POST['nombre'])) {
+			$data = array(
+               'nombre' => $_POST['nombre'],
+               'carrera' => $_POST['carrera'],
+               'nregistro' => $_POST['nregistro'],
+               'agno' => $_POST['agno']
+            );
+			$this->alumnos->altaAlumno($data);
+			echo "<h3 id='cartelExito'>Alta Exitosa</h3>";
+		}
+		$this->load->view('altaAlumno');
+	}
 }
 ?>
